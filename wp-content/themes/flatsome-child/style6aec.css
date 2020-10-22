@@ -1,0 +1,924 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+
+/*---------global-----------*/
+html{overflow-x:hidden}
+body{overflow-x:hidden}
+/*---căn đều sẳn phẩm---*/
+.has-shadow>.col>.col-inner {
+    height: 100%;
+}
+.flickity-viewport .col.is-selected {
+    height: 100%;
+}
+.flickity-viewport .col-inner {
+    height: 100%;
+}
+.product-small.box.has-hover.box-normal.box-text-bottom {
+    height: 100%;
+}
+/*.product-small.box:hover {
+     border: 2px dashed #ddd;
+}*/
+/*---giới hạn chữ tên sản phẩm---*/
+p.name.product-title a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    height: 1.3em;
+    margin-bottom: 10px;
+}
+/*---style product price---*/
+.price-wrapper{
+    display: table; 
+}
+.price-wrapper .price{
+    height: 1.3em;
+    display: table-cell;
+    vertical-align:middle;
+    text-align: center;
+    line-height: 120%;
+}
+.product-short-description {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+/*---style related product---*/
+.related-products-wrapper .product-small.box {
+    background-color: #fff;
+    /*box-shadow: 0 1px 3px -2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+		border: 2px solid #ddd;
+}
+/*
+.related-products-wrapper .product-small.box:hover {
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}*/
+.related-products-wrapper .box-text.box-text-products {
+    padding: 15px;
+}
+.slider-nav-reveal .flickity-prev-next-button:hover, .slider-nav-reveal .flickity-prev-next-button {
+    width: 30px;
+    top: -2px;
+    bottom: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 -150px 15px 0 rgba(0,0,0,0);
+    margin: 0 !important;
+}
+/*---end style related product---*/
+
+/*-style tiêu đề bài viết trước sau-*/
+.nav-previous,
+.nav-next {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    height: auto;
+}
+/*---style giới hạn chữ bài viết---*/
+.blog-archive h5.post-title.is-large {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 2.6em;
+}
+.blog-archive p.from_the_blog_excerpt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 3em;
+}
+
+/*---style shop and product sidebar---*/
+#shop-sidebar ul,
+#product-sidebar ul,
+.post-sidebar ul {
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 15px;
+    background-color: rgba(221, 221, 221, 0.1);
+}
+
+#shop-sidebar ul li+li,
+#product-sidebar ul li+li,
+.post-sidebar ul li+li {
+    border-top: 1px dashed #ececec;
+}
+
+#shop-sidebar .is-divider,
+#product-sidebar .is-divider,
+.post-sidebar .is-divider {
+		margin-top: 0px;
+    background-color: rgba(0,0,0,0);
+}
+
+#shop-sidebar ul.product_list_widget li a:not(.remove),
+#product-sidebar ul.product_list_widget li a:not(.remove) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 2.6em;
+}
+#shop-sidebar .recent-blog-posts a,
+#product-sidebar .recent-blog-posts a,
+.post-sidebar .recent-blog-posts a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 2.6em;
+    color: #444;
+		padding-top: 0.2em;
+}
+#shop-sidebar span.post_comments.op-7.block.is-xsmall,
+#product-sidebar span.post_comments.op-7.block.is-xsmall,
+#product-sidebar span.post_comments.oppercase.op-7.block.is-xsmall,
+.post-sidebar span.post_comments.op-7.block.is-xsmall {
+    display: none;
+}
+
+.post-sidebar input.search-field.mb-0 {
+    height: 40px;
+    border-radius: 3px 0 0 3px;
+		box-shadow: inset 0 1px 2px rgba(0,0,0,0);
+}
+.post-sidebar button.ux-search-submit.submit-button.secondary.button.icon.mb-0 {
+    width: 40px;
+    height: 40px;
+    border-radius: 0 3px 3px 0;
+}
+/*---end style shop and product sidebar---*/
+/*---style filter in sidebar---*/
+ul.woocommerce-widget-layered-nav-list {
+    max-height: 300px;
+    overflow: auto;
+    padding-right: 20px;
+}
+ul.product_list_widget {
+    font-size: 14px;
+}
+/*---end style filter in sidebar---*/
+/*---style act_product---*/
+.acf_product {
+    font-size: 12px;
+    display: block;
+    background: #fffee7;
+    border: 1px solid #ccc;
+    padding: 10px !important;
+    border-radius: 5px;
+    max-height: 125px !important;
+    overflow-y: auto !important;
+    margin-bottom: 2em;
+}
+.acf_product a {
+    color: #fa5400;
+}
+
+/*---z-index sidebar mobile---*/
+.mfp-wrap {
+		z-index: 900001;
+}
+/*--------end global--------*/
+
+
+/*---------header-----------*/
+.header-main {
+	background: rgba(255,255,255,0.8);
+}
+/*---style mona_html---*/
+.mona_html {
+    font-size: 14px;
+}
+.mona_html:before {
+    content: "";
+    font-family: FontAwesome;
+    font-size: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    color: #333;
+}
+.mona_html.showroom:before {
+    content: "\f015";
+}
+.mona_html.hotline:before {
+	width: 1.5em;
+	height: 1.5em;
+    content: "";
+	background: transparent url('http://localhost/dental/wp-content/uploads/2018/07/customer-service.svg') no-repeat;
+    background-size: 1.5em 1.5em;
+    animation-name: tada;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.mona_html a {
+	color: #333;
+	font-weight: 700;
+}
+/*---style active nav---*/
+.header-main .nav > li.menu-item {
+	padding: 0 20px;
+}
+.header-main .nav > li.menu-item > a {
+	color: #343434;
+}
+.header-main .nav > li:hover > a,
+.header-main .nav > li.current-menu-item > a,
+.header-main .nav > li.current-menu-parent > a,
+.header-main .nav > li.current-post-parent > a,
+.header-main .nav > li.current-product-parent > a,
+.header-main .nav > li.current_page_parent > a,
+.header-main .nav > li.current-product-ancestor > a {
+    color: #00BCD5;
+}
+/*--------end header--------*/
+
+
+/*---------content-----------*/
+h2.title {
+	font-size: 2.2em;
+	margin-bottom: 0.2em;
+}
+h2.title span {
+	color: #00BCD5;
+	font-weight: bold;
+}
+p {
+	color: #959595;
+}
+/*---------Slider-----------*/
+.sec_slide h1 span {
+	color: #00BCD5;
+	font-weight: bold !important;
+}
+.sec_slide a.button {
+	padding: 0 3em;
+	font-weight: 300;
+}
+.sec_slide a.button.btn-left {
+	color: #343434;
+	border: solid 2px #343434;
+}
+.sec_slide a.button.btn-left:hover {
+	color: #00BCD5;
+	border: solid 2px #00BCD5;
+	background: none;
+}
+.sec_slide a.button.btn-right {
+	color: #00BCD5;
+	border: solid 2px #00BCD5;
+}
+.sec_slide a.button.btn-right:hover {
+	color: #343434;
+	border: solid 2px #343434;
+	background: none;
+}
+.sec_slide .icon-box.featured-box.icon-box-left.text-left 
+{   
+	display: inline-block;  
+	vertical-align: middle;
+}
+.sec_slide .icon-box-img {   
+	display: inline-block;   
+	vertical-align: middle;
+}
+.sec_slide .icon-box-text.last-reset {   
+	display: inline-block;  
+}
+.sec_slide .icon-box-text h5 {
+	font-weight: bold;
+}
+
+/*---------End Slider-----------*/
+
+/*---------Booking-----------*/
+.sec_booking a.button {
+	border: solid 2px #fff;
+	padding: 0.5em 4em;
+}
+.sec_booking a.button span {
+	color: #fff;
+}
+.sec_booking a.button:hover span {
+	color: #00BCD5;
+}
+.sec_booking h2 {
+	color: #fff;
+	font-size: 2.5em;
+	margin-bottom: 0;
+}
+.sec_booking h2 span {
+	font-weight: bold;
+}
+/*---------End Booking-----------*/
+/*---------Service-----------*/
+.sec_service .col-image-service {
+	background-image: url('../../../../../localhost/dental/wp-content/uploads/2019/09/title_img1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding: 2% 0;
+}
+.sec_service .icon-box {
+	margin-top: -19%;
+}
+.sec_service .icon-box-img .icon {
+	background: #aceefe;
+	width: 90px;
+    height: 90px;
+    border: 5px solid #FFF;
+    display: block;
+    border-radius: 100%;
+}
+.sec_service .icon-box-img img {
+	padding-top: 0;
+}
+.sec_service .col-service .col-inner:hover {
+	background: #f6f9f9;
+	border-color: #00bcd5;
+}
+.sec_service .col-service .col-inner {
+	padding: 6%;
+	border: solid 1px #eee;
+}
+/*---------End Service-----------*/
+
+/*---------Relax-----------*/
+.sec_relax .icon-box-img .icon {
+	width: 70px;
+    height: 70px;
+    border: 2px solid #343434;
+    display: block;
+    border-radius: 100%;
+    padding: 10px 15px;
+    margin-right: 1em;
+}
+.sec_relax .icon-box:hover .icon-box-img .icon {
+	border: 2px solid #00bcd5;
+	background: #aceefe;
+}
+/*---------End Relax-----------*/
+
+/*---------Dentist-----------*/
+.sec_dentist .col-image-dentist {
+	background-image: url('../../../../../localhost/dental/wp-content/uploads/2019/09/title_img2.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding: 2% 0;
+}
+.sec_dentist .box-text h3 {
+	font-size: 1.5em;
+	font-weight: 400;
+}
+.sec_dentist .box-text h3, 
+.sec_dentist .box-text p {
+	margin-bottom: 0.5em;
+}
+.sec_dentist .box-text .social-icons a {
+	margin: 10px 15px;
+	color: #e1e1e1;
+}
+.sec_dentist .box {
+	border: solid 1px #fff;
+	padding-top: 5px;
+}
+.sec_dentist .box:hover {
+	border: solid 1px #00bcd5;
+} 
+.sec_dentist .box:hover .social-icons a {
+	color: #00bcd5;
+}
+.sec_dentist .box:hover .box-text {
+	background: #F6F9F9;
+}
+/*---------End Dentist-----------*/
+
+/*---------Appointment-----------*/
+.sec_appointment .col-left .col-inner {
+	padding: 10% 10% 5% 45%;
+}
+.sec_appointment .col-left ul {
+	list-style: none;
+}
+.sec_appointment .col-left ul li {
+	margin-left: 0;
+	border-bottom: solid 2px rgba(52,52,52,0.07);
+	padding-bottom: 10px;
+}
+.sec_appointment .col-left ul li:last-child {
+	border-bottom: none;
+}
+.sec_appointment .col-left ul li span {
+	float: right;
+	color: #959595;
+}
+.sec_appointment .col-right .col-inner {
+	padding: 10% 35% 5% 10%;
+}
+.sec_appointment .col-left {
+	background: rgb(246, 249, 249);
+}
+.sec_appointment .col-right .wpcf7 .wpcf7-text, 
+.sec_appointment .col-right .wpcf7 .wpcf7-select, 
+.sec_appointment .col-right .wpcf7 .wpcf7-date {
+	margin-bottom: 0;
+	background: none;
+	border-bottom: solid 2px #00bcd5;
+	box-shadow: none;
+}
+.sec_appointment .col-right .wpcf7 .wpcf7-submit {
+	background: none;
+	border: solid 2px #343434;
+	color: #343434;
+	margin-top: 1em;
+}
+.sec_appointment .col-right .wpcf7 .wpcf7-submit:hover {
+	background: #00bcd5;
+	border: solid 2px #00bcd5;
+	color: #fff;
+	box-shadow: none;
+}
+input[type='text'], input[type='tel'], input[type='date'], select {
+	border: 0px solid #ddd;
+}
+/*---------End Appointment-----------*/
+
+/*---------Service Special-----------*/
+.sec_service_special .col-image-special {
+	background-image: url('../../../../../localhost/dental/wp-content/uploads/2019/09/title_img3.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding: 2% 0;
+}
+.sec_service_special .box-text h3 {
+	font-size: 1.5em;
+	font-weight: 400;
+}
+.sec_service_special .box-text h3, 
+.sec_service_special .box-text p {
+	margin: 0.5em 0;
+}
+.sec_service_special .box .box-text {
+	border-left: solid 1px #fff;
+	border-right: solid 1px #fff;
+	border-bottom: solid 1px #fff;
+	padding: 5%;
+} 
+.sec_service_special .box:hover .box-text {
+	background: #F6F9F9;
+	border-left: solid 1px #00bcd5;
+	border-right: solid 1px #00bcd5;
+	border-bottom: solid 1px #00bcd5;
+}
+/*---------End Service Special-----------*/
+
+/*---------Take Care-----------*/
+.sec_take_care {
+	background-image: url('../../../../../localhost/dental/wp-content/uploads/2019/09/tooth-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.sec_take_care ul {
+	list-style: none;
+}
+.sec_take_care ul li {
+	margin-left: 0;
+	color: #959595;
+	margin: 1em 0;
+}
+.sec_take_care ul li:before {
+	content: "\f10c";
+	font-family: FontAwesome;
+	color: #00bcd5;
+	margin-right: 10px;
+}
+/*---------End Take Care-----------*/
+
+/*---------Award-----------*/
+.sec_award h3 {
+	font-size: 3.5rem;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.sec_award .icon-box .icon-box-img {
+	margin-bottom: 0;
+}
+.sec_award .col .col-inner {
+	background: #F6F9F9;
+	padding: 8%;
+	border: solid 1px #fff;
+}
+.sec_award .col .col-inner:hover {
+	border: solid 1px #00bcd5;
+}
+/*---------End Award-----------*/
+
+/*---------Nhan xet-----------*/
+.sec_nhan_xet h3 {
+	line-height: 1.5em;
+}
+.sec_nhan_xet h2 span {
+	color: #959595;
+	font-size: 16px !important;
+}
+.sec_nhan_xet .quote:before {
+	content: "";
+    position: absolute;
+    font-weight: normal;
+    width: 250px;
+    height: 2px;
+    text-align: left;
+    font-style: normal;
+    left: 70px;
+    top: 28px;
+    background-color: #00bcd5;
+}
+.sec_nhan_xet .quote:after {
+	content: "";
+    position: absolute;
+    font-weight: normal;
+    width: 250px;
+    height: 2px;
+    text-align: left;
+    font-style: normal;
+    right: 70px;
+    top: 28px;
+    background-color: #00bcd5;
+}
+.sec_nhan_xet .slider .flickity-page-dots {
+	bottom: 0;
+}
+/*---------End Nhan xet-----------*/
+
+/*---------News-----------*/
+.sec_news .col-image-news {
+	background-image: url('../../../../../localhost/dental/wp-content/uploads/2019/09/title_img4.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding: 2% 0;
+}
+.sec_news .post-item .is-divider {
+	display: none;
+}
+.sec_news .post-item .box-text {
+	padding: 8%;
+}
+.sec_news .post-item .post-title {
+	font-size: 1.5em;
+	font-weight: 400;
+	margin-bottom: 1em;
+}
+.sec_news .post-item .box {
+	border: solid 1px #fff;
+}
+.sec_news .post-item .box:hover {
+	border: solid 1px #00bcd5;
+}
+.sec_news .post-item:hover .box .box-text {
+	background: #F6F9F9;
+}
+/*---------End News-----------*/
+
+/*---------Partner-----------*/
+.sec_partner {
+	border-top: solid 1px #eee;
+}
+.sec_partner .col-image-partner {
+	background-image: url('../../../../../localhost/dental/wp-content/uploads/2019/09/title_img5.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding: 2% 0;
+}
+/*---------End Partner-----------*/
+.sec_profile_dentist h3 {
+	font-size: 1.5em;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+.sec_profile_dentist .social-icons a {
+	margin-right: 20px;
+}
+.sec_profile_dentist .col-profile {
+	border-left: solid 1px #eee;
+	padding-left: 5%;
+}
+.sec_profile_dentist .col-profile ul li {
+	color: #959595;
+}
+.sec_lien_he .col-image-contact {
+	background-image: url('../../../../../localhost/dental/wp-content/uploads/2019/09/placeholder.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	padding: 2% 0;
+}
+.sec_lien_he a {
+	color: #959595;
+}
+.sec_lien_he a:hover {
+	color: #00bcd5;
+}
+.sec_lien_he .wpcf7 .wpcf7-text, 
+.sec_lien_he .wpcf7 .wpcf7-textarea {
+	margin-bottom: 0;
+	background: none;
+	border-bottom: solid 2px #00bcd5;
+	box-shadow: none;
+}
+.sec_lien_he .wpcf7 .wpcf7-submit {
+	background: none;
+	border: solid 2px #343434;
+	color: #343434;
+	margin-top: 1em;
+}
+.sec_lien_he .wpcf7 .wpcf7-submit:hover {
+	background: #00bcd5;
+	border: solid 2px #00bcd5;
+	color: #fff;
+	box-shadow: none;
+}
+input[type='text'], input[type='email'], textarea {
+	border: 0px solid #ddd;
+}
+.sec_lien_he .social-icons a {
+	color: #959595;
+	margin-right: 15px;
+}
+/*-----style contact form-----*/
+.form-ct {
+    width: 780px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.form-ct .form-row {
+    padding: 5px;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+.form-ct .form-row.w50 {
+    width: 50%;
+}
+.form-ct input,
+.form-ct textarea{
+    margin-bottom: 0;
+		box-shadow: inset 0 1px 2px rgba(0,0,0,0);
+}
+.form-ct .center-txt {
+    text-align: center;
+}
+.form-ct .center-txt input{
+    min-width: 50%;
+}
+.form-ct .wpcf7-form-control:focus {
+    border-color: #f8b742;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(248, 183, 66, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(248, 183, 66, 0.6);
+}
+/*---end style contact form---*/
+
+/*---style mona_title---*/
+.mona_title {
+    font-size: 1.8em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.3em;
+    position: relative;
+    margin: 0;
+    margin-bottom: 0.8em;
+    padding-bottom: 1.3em;
+}
+.mona_title:before {
+    position: absolute;
+    bottom: 0.75rem;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right,#76a03f 0%,#76a03f 25%,rgba(255,255,255,0) 25%,rgba(255,255,255,0) 75%,#76a03f 75%);
+}
+.mona_title:after {
+    position: absolute;
+    bottom: 0;
+    content: '\f296';
+    font-family: FontAwesome;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    line-height: 1;
+    color: #76a03f;
+}
+
+/*--------end content--------*/
+
+
+/*---------footer-----------*/
+.sec_footer h3 {
+	color: #343434;
+	font-weight: 400;
+}
+.sec_footer p {
+    color: #a4a4a4;
+    font-size: 14px;
+    margin-bottom: 0.8em;
+}
+.sec_footer a {
+    color: #a4a4a4;
+    font-size: 14px;
+}
+.sec_footer a:hover{
+    color: #00bcd5 !important;
+}
+.sec_footer .icon-box-img {
+    width: 14px !important;
+}
+.sec_footer .social-icons a {
+	margin-right: 20px;
+	background: #fff;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	padding: 10px;
+}
+.mona_sidebar_footer ul {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+.mona_sidebar_footer ul.menu>li+li, 
+.mona_sidebar_footer .widget>ul>li+li {
+	border-top: 0px dashed rgba(238, 238, 238, 0.3);
+}
+.mona_sidebar_footer ul li a:before {
+    content: "\f111";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin: 0 15px 0 5px;
+    color: #00bcd5;
+    font-size: 10px !important;
+}
+/*
+.mona_sidebar_footer ul li:hover a:before {
+	animation-name: tada;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.mona_sidebar_footer ul li a:after {
+    content: "\f0fb";
+    font-family: FontAwesome;
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0 5px 0 15px;
+		position: absolute;
+		right: 0;
+		transition: 2s;
+    -moz-transition: 2s;
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+}
+.mona_sidebar_footer ul li:hover a:after {
+		-webkit-animation:spin 1s;
+    -moz-animation:spin 1s;
+    animation:spin 1s;
+		right: 30%;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(180deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(180deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(180deg); transform:rotate(180deg); } }
+*/
+.mona_sidebar_footer ul > li:hover > a,
+.mona_sidebar_footer ul > li.current-menu-item > a,
+.mona_sidebar_footer ul > li.current-menu-parent > a,
+.mona_sidebar_footer ul > li.current-post-parent > a,
+.mona_sidebar_footer ul > li.current_page_parent > a,
+.mona_sidebar_footer ul > li.current-product-parent > a,
+.mona_sidebar_footer ul > li.current-product-ancestor > a {
+    color: #00bcd5;
+}
+
+/*---style form dang ky---*/
+.sec_footer form.wpcf7-form {
+    margin-bottom: 0;
+}
+.sec_footer .wpcf7 p {
+    display: inline-flex;
+}
+.sec_footer input#email-dang-ky {
+    height: 40px;
+    border-radius: 3px 0 0 3px;
+		border-right: 0;
+		box-shadow: inset 0 1px 2px rgba(0,0,0,0);
+}
+.sec_footer input#btn-gui {
+    height: 40px;
+    border-radius: 0 3px 3px 0;
+}
+.mona-hiden{
+		display:none !important;
+}
+#btn-gui-icon {
+    height: 40px;
+    border-radius: 0 3px 3px 0;
+    color: #00bcd5;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0);
+    border: 0px solid #ddd;
+    border-left: 0;
+    cursor: pointer;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+/*--------end footer--------*/
+
+/*-----style Desktop mode-----*/
+@media only screen and (min-width: 2560px) {
+
+}
+
+@media only screen and (max-width: 1920px) {
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+}
+/*-----End style Desktop mode-----*/
+
+/*-----style Laptop mode-----*/
+@media (min-width: 1281px) {
+	
+}
+/*-----end style Laptop mode-----*/
+/*-----style tablet mode-----*/
+@media screen and (max-width: 849px){
+	.sec_booking a.button {
+		width: 100%;
+	}
+	.sec_booking h2 {
+		margin-bottom: 0.5em;
+	}
+	.sec_service .icon-box {
+		margin-top: -30%;
+	}
+	.sec_appointment .col-left .col-inner, 
+	.sec_appointment .col-right .col-inner {
+		padding: 20% 5%;
+	}
+}
+/*---end style mobile mode---*/
+/*-----style mobile mode-----*/
+@media screen and (max-width: 549px){
+	.sec_slide .bg {
+		background-position: 70% 0% !important;
+	}
+	.sec_booking h2 {
+		font-size: 2em;
+	}
+	.sec_service .col-service {
+		margin-bottom: 2em;
+	}
+	.sec_service .icon-box {
+		margin-top: -21%;
+	}
+	.sec_relax .icon-box-text h3, 
+	.sec_service .icon-box-text h3 {
+		font-size: 1.2em;
+	}
+	.sec_lien_he .wpcf7 .form-row {
+		width: 100%;
+	}
+}
+/*---end style mobile mode---*/
+@media only screen and (max-width: 48em) {
+/*************** ADD MOBILE ONLY CSS HERE  ***************/
+
+
+}
